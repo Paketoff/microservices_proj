@@ -1,0 +1,24 @@
+<form 
+  class="card"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  >
+  <div class="card-content">
+    <span class="card-title"> Оставить заказ </span>
+    <div class="input-field">
+      <input id="name" type="name" formControlName="name">
+      <label for="name">Имя:</label>
+    </div>
+    <div class="input-field">
+      <input id="number" type="number" formControlName="number">
+      <label for="number">Ваш номер:</label>
+    </div>
+    <div class="card-action">
+      <button 
+      type="submit"
+      class="modal-action btn waves-effect"
+      [disabled]="form.invalid || form.disabled"
+      >Оставить заказ</button>
+    </div>
+  </div>
+</form>

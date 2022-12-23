@@ -1,0 +1,40 @@
+<div class="btn-group mr-2">
+  <a routerLink="/admin/products/create" class="btn btn-sm btn-outline-secondary">
+    Add
+  </a>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">number</th>
+        <th scope="col">userId</th>
+        <th scope="col">...</th>
+        <th scope="col">...</th>
+        <th scope="col">...</th>
+        <th scope="col">...</th>
+        <th scope="col">...</th>
+      </tr>
+    </thead>
+    <!-- <tbody>
+      <tr *ngFor="let res of result">
+        <td>{{res.id}}</td>
+        <td>{{res.name}}</td>
+        <td>{{res.number}}</td>
+        <td>{{res.{user}}}</td>
+        <td>{{res.user.name}}</td>
+        <td>{{res.user.username}}</td>
+        <td>{{res.user.role}}</td>
+        <td>{{res.user.orders}}</td>
+        <td>{{res.user.email}}</td>
+        <td>{{res.user.password}}</td>
+      </tr>
+    </tbody> -->
+    <div class="result">
+      {{result | json}}
+    </div>
+  </table>
+</div>
