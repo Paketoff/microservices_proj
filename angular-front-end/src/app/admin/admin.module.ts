@@ -12,6 +12,8 @@ import { ProductCreateComponent } from './product-create/product-create.componen
 import { OrdersComponent } from './orders/orders.component';
 import { OrdersModule } from './orders/orders.module';
 import { OrderCreateComponent } from './order-create/order-create.component';
+import { MaterialsComponent } from './materials/materials.component';
+import { MaterialsCreateComponent } from './materials-create/materials-create.component';
 
 
 
@@ -24,6 +26,8 @@ import { OrderCreateComponent } from './order-create/order-create.component';
     ProductCreateComponent,
     OrdersComponent,
     OrderCreateComponent,
+    MaterialsComponent,
+    MaterialsCreateComponent,
   ],
   imports: [
     CommonModule,

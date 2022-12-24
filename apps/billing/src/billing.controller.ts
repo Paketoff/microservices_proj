@@ -33,4 +33,11 @@ export class BillingController {
     this.billingService.bill(data);
     this.rmqService.ack(context);
   }
+
+  @EventPattern('material_created')
+  @UseGuards(JwtAuthGuard)
+  async handleMaterialCreated(@Payload() data: any, @Ctx() context: RmqContext) {
+    this.billingService.bill(data);
+    this.rmqService.ack(context);
+  }
 }

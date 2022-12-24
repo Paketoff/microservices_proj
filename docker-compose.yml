@@ -43,6 +43,27 @@ services:
     ports:
       - '3002:3002'
 
+  materials:
+    build: 
+      context: .
+      dockerfile: ./apps/materials/Dockerfile
+      target: development
+    command: npm run start:dev materials
+    env_file:
+      - ./apps/materials/.env
+    depends_on:
+      - mongodb-primary
+      - mongodb-secondary
+      - mongodb-arbiter
+      - billing
+      - auth
+      - rabbitmq
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '6001:6001'
+
   billing:
     build: 
       context: .

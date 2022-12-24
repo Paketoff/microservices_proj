@@ -53,6 +53,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/generators/tsconfig.app.json"
       }
+    },
+    "materials": {
+      "type": "application",
+      "root": "apps/materials",
+      "entryFile": "main",
+      "sourceRoot": "apps/materials/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/materials/tsconfig.app.json"
+      }
     }
   }
 }

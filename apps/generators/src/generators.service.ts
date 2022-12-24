@@ -47,7 +47,7 @@ export class GeneratorsService {
     try {
       const generator = await this.generatorsRepository.create(request, {session});
       await lastValueFrom(
-        this.billingClient.emit('generator_created', {
+        this.billingClient.emit('generator_updated', {
           request,
           Authentication: authentication,
         })
